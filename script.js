@@ -20,6 +20,8 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
 
+  //var saved = localStorage.getItem("key");
+
 // functions
 function displayDate() {
     const currentDate = moment().format('dddd, MMMM DD, YYYY');
@@ -60,12 +62,16 @@ function displayDate() {
 
   function getSavedTasks(){
     var saved = localStorage.getItem("key");
+    $('#task-input').text(saved);
+    console.log("getting previous tasks");
+
   }
   
   
   
   $(document).ready(function() {
     displayDate()
+    getSavedTasks()
     console.log(window.localStorage);
     
   })

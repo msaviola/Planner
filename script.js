@@ -18,7 +18,7 @@ function displayDate() {
     let hourNow24 = moment().format('HH');   
     //console.log(hourNow24);
   
-    var workHours = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17"]
+    var workHours = ["08", "09", "10", "11", "12", "13", "14", "15", "16", "17"]
 
     
    
@@ -44,7 +44,7 @@ function displayDate() {
 
         }
         else{
-          $('#task-input'+i).css('background-color', 'blue');
+          $('#task-input'+i).css('background-color', 'light grey');
           //console.log($('#task-input'+i));
         }
       }

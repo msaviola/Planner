@@ -1,27 +1,4 @@
 
-// // functions
-// function myCalendar() {
-//     $(document).ready(function () {
-//         let momentVar = moment().format('dddd, MMMM DD, YYYY');
-//         let workHours = ["8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"]
-// function currentDay(){
-//     let currentDay = $("#currentDay").text(momentVar);
-//         return currentDay;
-
-
-
-// $(document).ready(function() {
-
-//   console.log(displayDate)
-
-
-// })
-
-/* If you're feeling fancy you can add interactivity 
-    to your site with Javascript */
-
-    
-
 
 // functions
 function displayDate() {
@@ -29,9 +6,57 @@ function displayDate() {
     console.log(currentDate);
     $("#currentDay").text(JSON.stringify(currentDate))
    
+}
+
+//function currentTime(){
+  
+  //var Time=document.querySelector$("#Time"+i)
+ 
+
+  function colorCoding() {
+
+    let hourNow24 = moment().format('HH');   
+    //console.log(hourNow24);
+  
+    var workHours = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17"]
+
+    
+   
+    if(hourNow24 >= 8 && hourNow24 <= 17) {
+  
+      for (let i =0; i<=10 ; i++) { 
+        //console.log(workHours[i]);
+
+        if (workHours[i] == hourNow24) {
+          $('#task-input'+i).css('background-color', 'red');
+          //console.log($('#task-input'+i));
+          continue;
+        }
+        
+        if (workHours[i]<hourNow24) {
+          $('#task-input'+i).css('background-color', 'grey');
+        } 
+        if (workHours[i]>hourNow24){
+          $('#task-input'+i).css('background-color', 'green');
+           console.log($('#task-input'+i));
+           console.log(workHours[i]);
+           console.log(hourNow24);
+
+        }
+        else{
+          $('#task-input'+i).css('background-color', 'blue');
+          //console.log($('#task-input'+i));
+        }
+      }
+  
+    }
+    else {
+      
+      $("textarea").css('background-color', 'pink');
+    }
+
+
   }
-
-
 
 
   $(".saveBtn").on("click", function(event) {
@@ -120,5 +145,6 @@ function displayDate() {
     displayDate()
     getSavedTasks()
     console.log(window.localStorage);
+    colorCoding()
     
   })

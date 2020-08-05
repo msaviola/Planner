@@ -32,8 +32,7 @@ THEN the saved events persist
 
 https://msaviola.github.io/Planner/
 
-[screenshot](plannerScreen.png)
 
-[plannerScreen](https://github.com/msaviola/Planner/blob/master/plannerScreen.PNG?raw=true)
+![plannerScreen](https://github.com/msaviola/Planner/blob/master/plannerScreen.PNG?raw=true)
 
 

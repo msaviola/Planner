@@ -34,6 +34,6 @@ https://msaviola.github.io/Planner/
 
 [screenshot](plannerScreen.png)
 
-https://github.com/msaviola/Planner/blob/master/plannerScreen.PNG?raw=true
+[plannerScreen](https://github.com/msaviola/Planner/blob/master/plannerScreen.PNG?raw=true)
 
 
